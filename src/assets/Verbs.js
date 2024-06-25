@@ -1,4 +1,4 @@
-export let verbs = [
+export let Verbs = [
   "sezieren",
   "abdanken",
   "abgrasen",

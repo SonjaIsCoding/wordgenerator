@@ -1,4 +1,4 @@
-export let adjectives = [
+export let Adjectives = [
   "exquisit",
   "neurotisch",
   "anschmiegsam",

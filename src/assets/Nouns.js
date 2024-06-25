@@ -1,4 +1,4 @@
-export let nouns = [
+export let Nouns = [
   "Leichnam",
   "Augenweide",
   "Backpfeife",
