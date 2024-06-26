@@ -4,40 +4,50 @@
   box-sizing: border-box;
 }
 
-.screen {
+.container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  align-items: center;
-  justify-items: center;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Question . Menu"
+    "Sentence Sentence Sentence"
+    ". . GenerateButton";
 }
 
-.sentence {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  align-items: center;
-  justify-items: center;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
+.grid-item-menu {
+  grid-area: Menu;
 }
 
-.words {
-  padding: 5px;
+.grid-item-sentence {
+  grid-area: Sentence;
+}
+
+.grid-item-generate-button {
+  grid-area: GenerateButton;
+}
+
+.grid-item-question {
+  grid-area: Question;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . .";
+  grid-area: Menu;
 }
 
 .button {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-area: Button;
 }
 
 .question {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 3;
-  grid-row-end: 4;
+  grid-area: Question;
 }
