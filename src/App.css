@@ -4,50 +4,19 @@
   box-sizing: border-box;
 }
 
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  list-style: none;
+  gap: 5px;
+}
+
 .container {
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "Question . Menu"
-    "Sentence Sentence Sentence"
-    ". . GenerateButton";
-}
-
-.grid-item-menu {
-  grid-area: Menu;
-}
-
-.grid-item-sentence {
-  grid-area: Sentence;
-}
-
-.grid-item-generate-button {
-  grid-area: GenerateButton;
-}
-
-.grid-item-question {
-  grid-area: Question;
-}
-
-.menu {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    ". . ."
-    ". . ."
-    ". . .";
-  grid-area: Menu;
-}
-
-.button {
-  grid-area: Button;
-}
-
-.question {
-  grid-area: Question;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 10px;
 }

@@ -4,8 +4,7 @@ import { Sentence } from "./Components/Sentence";
 import { Adjectives } from "./assets/Adjectives";
 import { Nouns } from "./assets/Nouns";
 import { Verbs } from "./assets/Verbs";
-import { Button } from "./Components/Button";
-import { Question } from "./Components/Question";
+import { Navbar } from "../src/Components/Navbar";
 
 function App() {
   const [word, setWord] = useState("");
@@ -15,11 +14,9 @@ function App() {
   let adjective = Math.floor(Math.random() * Adjectives.length + 1);
 
   return (
-    <div className="container">
-      <div className="grid-item-menu">
-        <h1>Menu</h1>
-      </div>
-      <div className="grid-item-sentence">
+    <>
+      <Navbar />
+      <div className="container">
         <Sentence
           adjectiveOne="Bli"
           nounOne="Bla"
@@ -27,14 +24,12 @@ function App() {
           adjectiveTwo="Möp"
           nounTwo="Muh"
         />
+
+        <button>Generiere!</button>
+
+        <div>?</div>
       </div>
-      <div className="grid-item-generate-button">
-        <Button />
-      </div>
-      <div className="grid-item-question">
-        <Question />
-      </div>
-    </div>
+    </>
   );
 }
 
