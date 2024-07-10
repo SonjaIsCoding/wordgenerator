@@ -32,7 +32,15 @@
 button {
   color: var(--text-primary);
   background-color: var(--background);
-  border: 2px var(--text-primary) solid;
+  border: 1px var(--text-primary) solid;
+  padding: 3px;
   float: right;
   transition: all 0.5s;
+  font-family: "Amatic";
+  font-size: larger;
+}
+
+@font-face {
+  font-family: "Amatic";
+  src: url(./assets/fonts/Amatic_SC/AmaticSC-Regular.ttf);
 }

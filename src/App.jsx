@@ -8,6 +8,7 @@ import { Navbar } from "../src/Components/Navbar";
 import useLocalStorage from "use-local-storage";
 import { TbSunMoon } from "react-icons/tb";
 import { Tooltip } from "react-tooltip";
+import { BsQuestionOctagon } from "react-icons/bs";
 
 function App() {
   const [words, setWords] = useState(generateAllWords);
@@ -48,7 +49,6 @@ function App() {
   return (
     <>
       <div className="App" data-theme={theme}>
-        <Navbar />
         <div className="container">
           <Sentence
             words={words}
@@ -63,14 +63,14 @@ function App() {
           />
           <button onClick={handleGenerator}>Generiere!</button>
           <button onClick={switchTheme}>
-            <TbSunMoon />
+            Es werde {theme === "light" ? "Dunkelheit" : "Licht"}
           </button>
           <div
             data-tooltip-id="explanation"
             data-tooltip-content="Exquisite Corpse ist eine im Surrealismus entwickelte spielerische Methode, 
             dem Zufall bei der Entstehung von Texten und Bildern Raum zu geben. "
           >
-            ?
+            <BsQuestionOctagon />
           </div>
           <Tooltip id="explanation" />
         </div>

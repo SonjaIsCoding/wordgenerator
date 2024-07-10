@@ -1,4 +1,6 @@
 .word {
   padding: 5px;
   cursor: pointer;
+  font-family: "Amatic";
+  font-size: xx-large;
 }
