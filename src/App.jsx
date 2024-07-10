@@ -5,9 +5,22 @@ import { Adjectives } from "./assets/Adjectives";
 import { Nouns } from "./assets/Nouns";
 import { Verbs } from "./assets/Verbs";
 import { Navbar } from "../src/Components/Navbar";
+import useLocalStorage from "use-local-storage";
+import { TbSunMoon } from "react-icons/tb";
 
 function App() {
   const [words, setWords] = useState(generateAllWords);
+
+  const defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [theme, setTheme] = useLocalStorage(
+    "theme",
+    defaultDark ? "dark" : "light"
+  );
+
+  const switchTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  };
 
   function generateWord(index) {
     if (index === 0 || index === 3) {
@@ -34,20 +47,26 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <div className="container">
-        <Sentence
-          words={words}
-          onSelectWord={(index) => {
-            setWords(
-              words.map((word, i) => (i === index ? generateWord(index) : word))
-            );
-            console.log(index);
-          }}
-        />
-        <button onClick={handleGenerator}>Generiere!</button>
-
-        <div>?</div>
+      <div className="App" data-theme={theme}>
+        <Navbar />
+        <div className="container">
+          <Sentence
+            words={words}
+            onSelectWord={(index) => {
+              setWords(
+                words.map((word, i) =>
+                  i === index ? generateWord(index) : word
+                )
+              );
+              console.log(index);
+            }}
+          />
+          <button onClick={handleGenerator}>Generiere!</button>
+          <button onClick={switchTheme}>
+            <TbSunMoon />
+          </button>
+          <div>?</div>
+        </div>
       </div>
     </>
   );

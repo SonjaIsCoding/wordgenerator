@@ -1,3 +1,8 @@
-body {
-  padding: 20px;
+:root {
+  --background: rgb(228, 198, 198);
+  --text-primary: rgb(82, 82, 82);
+}
+[data-theme="dark"] {
+  --background: rgb(82, 82, 82);
+  --text-primary: rgb(228, 198, 198);
 }
