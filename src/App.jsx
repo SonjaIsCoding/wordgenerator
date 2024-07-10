@@ -7,6 +7,7 @@ import { Verbs } from "./assets/Verbs";
 import { Navbar } from "../src/Components/Navbar";
 import useLocalStorage from "use-local-storage";
 import { TbSunMoon } from "react-icons/tb";
+import { Tooltip } from "react-tooltip";
 
 function App() {
   const [words, setWords] = useState(generateAllWords);
@@ -16,7 +17,6 @@ function App() {
     "theme",
     defaultDark ? "dark" : "light"
   );
-
   const switchTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
@@ -65,7 +65,14 @@ function App() {
           <button onClick={switchTheme}>
             <TbSunMoon />
           </button>
-          <div>?</div>
+          <div
+            data-tooltip-id="explanation"
+            data-tooltip-content="Exquisite Corpse ist eine im Surrealismus entwickelte spielerische Methode, 
+            dem Zufall bei der Entstehung von Texten und Bildern Raum zu geben. "
+          >
+            ?
+          </div>
+          <Tooltip id="explanation" />
         </div>
       </div>
     </>
