@@ -10,6 +10,7 @@
   justify-content: end;
   list-style: none;
   gap: 5px;
+  padding: 5px;
 }
 
 .container {
@@ -19,4 +20,19 @@
   align-items: center;
   min-height: 100vh;
   gap: 10px;
+}
+
+.App {
+  color: var(--text-primary);
+  background-color: var(--background);
+  font-size: large;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+button {
+  color: var(--text-primary);
+  background-color: var(--background);
+  border: 2px var(--text-primary) solid;
+  float: right;
+  transition: all 0.5s;
 }
