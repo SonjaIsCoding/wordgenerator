@@ -40,7 +40,21 @@ button {
   font-size: larger;
 }
 
+.explanation {
+  font-family: "Fredericka";
+}
+
 @font-face {
   font-family: "Amatic";
   src: url(./assets/fonts/Amatic_SC/AmaticSC-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Titillium";
+  src: url(./assets/fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Fredericka";
+  src: url(./assets/fonts/Fredericka_the_Great/FrederickatheGreat-Regular.ttf);
 }

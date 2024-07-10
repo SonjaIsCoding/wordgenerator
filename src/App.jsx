@@ -63,12 +63,14 @@ function App() {
           />
           <button onClick={handleGenerator}>Generiere!</button>
           <button onClick={switchTheme}>
-            Es werde {theme === "light" ? "Dunkelheit" : "Licht"}
+            Es werde {theme === "light" ? "Dunkelheit 🌛" : "Licht 🌞"}
           </button>
           <div
             data-tooltip-id="explanation"
             data-tooltip-content="Exquisite Corpse ist eine im Surrealismus entwickelte spielerische Methode, 
             dem Zufall bei der Entstehung von Texten und Bildern Raum zu geben. "
+            data-tooltip-class-name="explanation"
+            data-tooltip-variant={theme === "light" ? "dark" : "light"}
           >
             <BsQuestionOctagon />
           </div>
